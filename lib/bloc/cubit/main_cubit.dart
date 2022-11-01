@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
-import 'package:flutter_start_1/bloc/CounterCubit.dart';
-import 'package:flutter_start_1/bloc/SimpleBlocObserver.dart';
+import 'package:flutter_start_1/bloc/cubit/CounterCubit.dart';
+import 'package:flutter_start_1/bloc/cubit/SimpleBlocObserver.dart';
 
 void main() async {
   // Stream<int> stream = countStream(10);
