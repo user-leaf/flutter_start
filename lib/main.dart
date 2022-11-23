@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_start_1/flutter2.4_route_manager/RouterTestRoute.dart';
 import 'package:flutter_start_1/flutter2.4_route_manager/TipRoute.dart';
+import 'package:flutter_start_1/random_words.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,16 +30,17 @@ class MyApp extends StatelessWidget {
       routes: {
         "router_test_route": (context) => RouterTestRoute(),
         "tip_route": (context) {
-          return TipRoute(text: ModalRoute.of(context)!.settings.arguments as String);
+          return TipRoute(
+              text: ModalRoute.of(context)!.settings.arguments as String);
         },
       },
-      // home: const MyHomePage(title: 'Flutter Demo Home Page'),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('flutter'),
-        ),
-        body: RouterTestRoute(),
-      ),
+      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      // home: Scaffold(
+      //   appBar: AppBar(
+      //     title: Text('flutter'),
+      //   ),
+      //   body: RouterTestRoute(),
+      // ),
     );
   }
 }
@@ -116,6 +118,7 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
+            RandomWordsWidget(),
           ],
         ),
       ),
