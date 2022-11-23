@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_start_1/flutter2.4_route_manager/RouterTestRoute.dart';
+import 'package:flutter_start_1/flutter2.4_route_manager/TipRoute.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,7 +26,19 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      routes: {
+        "router_test_route": (context) => RouterTestRoute(),
+        "tip_route": (context) {
+          return TipRoute(text: ModalRoute.of(context)!.settings.arguments as String);
+        },
+      },
+      // home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('flutter'),
+        ),
+        body: RouterTestRoute(),
+      ),
     );
   }
 }
