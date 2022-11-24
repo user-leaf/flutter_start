@@ -38,6 +38,7 @@ dependencies:
   flutter_bloc: ^8.0.0
   json_serializable: ^6.5.4
   english_words: ^4.0.0
+  dio: ^4.0.6
 
 dev_dependencies:
   flutter_test:

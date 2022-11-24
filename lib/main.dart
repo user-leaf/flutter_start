@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_start_1/flutter2.4_route_manager/RouterTestRoute.dart';
 import 'package:flutter_start_1/flutter2.4_route_manager/TipRoute.dart';
+import 'package:flutter_start_1/net/demo_json.dart';
 import 'package:flutter_start_1/random_words.dart';
 
 void main() {
@@ -34,13 +35,13 @@ class MyApp extends StatelessWidget {
               text: ModalRoute.of(context)!.settings.arguments as String);
         },
       },
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-      // home: Scaffold(
-      //   appBar: AppBar(
-      //     title: Text('flutter'),
-      //   ),
-      //   body: RouterTestRoute(),
-      // ),
+      // home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('flutter'),
+        ),
+        body: JsonDemo(),
+      ),
     );
   }
 }
