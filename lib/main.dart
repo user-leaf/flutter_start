@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_start_1/SwitchAndCheckBoxTestRoute.dart';
 import 'package:flutter_start_1/flutter2.4_route_manager/RouterTestRoute.dart';
 import 'package:flutter_start_1/flutter2.4_route_manager/TipRoute.dart';
-import 'package:flutter_start_1/net/demo_json.dart';
 import 'package:flutter_start_1/random_words.dart';
 
 void main() {
@@ -35,13 +35,13 @@ class MyApp extends StatelessWidget {
               text: ModalRoute.of(context)!.settings.arguments as String);
         },
       },
-      // home: const MyHomePage(title: 'Flutter Demo Home Page'),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('flutter'),
-        ),
-        body: JsonDemo(),
-      ),
+      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      // home: Scaffold(
+      //   appBar: AppBar(
+      //     title: Text('flutter'),
+      //   ),
+      //   body: JsonDemo(),
+      // ),
     );
   }
 }
@@ -120,6 +120,33 @@ class _MyHomePageState extends State<MyHomePage> {
               style: Theme.of(context).textTheme.headline4,
             ),
             RandomWordsWidget(),
+            Text('Hello world!'),
+            Text(
+              "Hello world! I'm Jack." * 4,
+              textAlign: TextAlign.left,
+              overflow: TextOverflow.ellipsis,
+              maxLines: 3,
+              textScaleFactor: 1.5,
+            ),
+            Text(
+              'Hello world',
+              style: TextStyle(
+                color: Colors.blue,
+                height: 1.2,
+                fontFamily: "Courier",
+                decoration: TextDecoration.underline,
+                decorationStyle: TextDecorationStyle.dotted,
+              ),
+            ),
+            Icon(Icons.abc),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) {
+                    return const SwitchAndCheckBoxTestRoute();
+                  }));
+                },
+                child: const Text('Switch And Checkbox')),
           ],
         ),
       ),
