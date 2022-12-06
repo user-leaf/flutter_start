@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_start_1/SwitchAndCheckBoxTestRoute.dart';
 import 'package:flutter_start_1/flutter2.4_route_manager/RouterTestRoute.dart';
 import 'package:flutter_start_1/flutter2.4_route_manager/TipRoute.dart';
+import 'package:flutter_start_1/login_route.dart';
 import 'package:flutter_start_1/random_words.dart';
 
 void main() {
@@ -147,6 +148,14 @@ class _MyHomePageState extends State<MyHomePage> {
                   }));
                 },
                 child: const Text('Switch And Checkbox')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) {
+                    return LoginRoute();
+                  }));
+                },
+                child: const Text('登录页')),
           ],
         ),
       ),
