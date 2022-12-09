@@ -46,7 +46,77 @@ class FlexRoute extends StatelessWidget {
                 ],
               ),
             ),
-          )
+          ),
+          Wrap(
+            spacing: 10,
+            runSpacing: 10,
+            alignment: WrapAlignment.center,
+            direction: Axis.horizontal,
+            children: [
+              Text("abcd" * 5),
+              Text("abcd" * 5),
+              Text("abcd" * 5),
+            ],
+          ),
+          Container(
+            width: 120,
+            height: 120,
+            color: Colors.blue.shade50,
+            child: Align(
+              alignment: Alignment.topRight,
+              child: FlutterLogo(
+                size: 60,
+              ),
+            ),
+          ),
+          Align(
+            widthFactor: 2,
+            heightFactor: 2,
+            alignment: Alignment.topRight,
+            child: FlutterLogo(
+              size: 60,
+            ),
+          ),
+          Align(
+            widthFactor: 3,
+            heightFactor: 3,
+            alignment: FractionalOffset.topRight,
+            child: FlutterLogo(
+              size: 60,
+            ),
+          ),
+          DecoratedBox(
+            decoration: BoxDecoration(color: Colors.red),
+            child: Center(
+              child: Text("xxx"),
+            ),
+          ),
+          DecoratedBox(
+            decoration: BoxDecoration(color: Colors.red),
+            child: Center(
+              widthFactor: 1,
+              heightFactor: 1,
+              child: Text("xxx"),
+            ),
+          ),
+          DecoratedBox(
+            decoration: BoxDecoration(
+              gradient:
+                  LinearGradient(colors: [Colors.red, Colors.orange.shade700]),
+              borderRadius: BorderRadius.circular(3.0),
+              boxShadow: [
+                BoxShadow(
+                    color: Colors.black54, offset: Offset(2, 2), blurRadius: 4)
+              ],
+            ),
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 80, vertical: 18),
+              child: Text(
+                'Login',
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+          ),
         ],
       ),
     );

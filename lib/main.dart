@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_start_1/SwitchAndCheckBoxTestRoute.dart';
 import 'package:flutter_start_1/chapter4/flex_route.dart';
+import 'package:flutter_start_1/chapter4/stack_route.dart';
 import 'package:flutter_start_1/flutter2.4_route_manager/RouterTestRoute.dart';
 import 'package:flutter_start_1/flutter2.4_route_manager/TipRoute.dart';
 import 'package:flutter_start_1/login_route.dart';
 import 'package:flutter_start_1/random_words.dart';
 
+import 'chapter4/align_route.dart';
 import 'chapter4/chapter4_constrain_route.dart';
 
 void main() {
@@ -175,6 +177,22 @@ class _MyHomePageState extends State<MyHomePage> {
                   }));
                 },
                 child: const Text('弹性布局')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) {
+                    return StackRoute();
+                  }));
+                },
+                child: const Text('Stack')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) {
+                    return AlignRoute();
+                  }));
+                },
+                child: const Text('Align')),
           ],
         ),
       ),
